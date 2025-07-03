@@ -40,9 +40,9 @@ function ImageContainer({Vinyl}){
    {numItems=== 0? <button onClick={handleAddToCart} className="flip-add-button">Add to cart</button>
    :
    <div id="plus-minus">
-   <button onClick={handleAddToCart}>+</button>
-   <p>{numItems}</p>
    <button onClick={handleRemoveFromCart}>-</button>
+   <p>{numItems}</p>
+   <button onClick={handleAddToCart}>+</button>
    </div>
    }
 </div>

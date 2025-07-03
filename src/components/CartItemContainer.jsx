@@ -26,7 +26,7 @@ function CartItemContainer({vinyl}){
         Qty: {vinyl.quantity}
       </span>
     </div>
-                    <button onClick={handleRemoveFromCart}>Remove from cart</button>
+                    <button onClick={handleRemoveFromCart}>Remove 1 item from cart</button>
                 </Card.Body>
             </Card>
         </>
