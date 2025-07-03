@@ -1,0 +1,52 @@
+#summ-page-cont{
+     display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border: 2px solid black;
+    box-shadow: 0.25rem 0.25rem 0 #000;
+    padding: 1.5rem;
+    width: 70vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+  
+}
+#summ-page-cont h1{
+    color: #E49052;
+    align-self: center;
+    border-bottom: 4px solid black;
+}
+#summ-page-cont h3{
+border-bottom: 4px solid black;
+}
+#summ-page-cont button,#review button{
+  align-self: center;
+  padding: 0.5rem 1rem;
+  width: 30vw;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.1s ease, background-color 0.1s ease;
+  box-shadow: 0.25rem 0.25rem 0 #000;
+}
+#summ-page-cont button:active, #review button:active{
+  background-color: #222;
+   transform: translate(0.125rem,0.125rem);
+    box-shadow: 0.125rem 0.125rem 0 #000;
+
+}
+#review{
+position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(8px); 
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}

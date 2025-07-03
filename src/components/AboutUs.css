@@ -1,0 +1,20 @@
+.parallax-about {
+  background-image: url('../assets/grain-disk.jpg');
+  height:50vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
+}
+#start-desc{
+   display: flex;
+   justify-content: center;
+    margin-top: 5vh; 
+    height: 20vh;
+}
+#start-desc p{
+    font-size: 1.5vw;
+    font-weight: 200;
+    letter-spacing: 3px;
+}

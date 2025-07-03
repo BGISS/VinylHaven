@@ -1,0 +1,27 @@
+#start-cont{
+    width: 100vw;
+}
+
+#start-text{
+    display: flex;
+    justify-content: center;
+    margin-top: 5vh;
+}
+#start-text  p{
+    font-size: 2vw;
+    font-weight: 200;
+    letter-spacing: 5px;
+}
+.parallax {
+  background-image: url('../assets/landing-disk.jpg');
+  height:70vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+#grain-disk{
+    width: 100%;
+ 
+}
