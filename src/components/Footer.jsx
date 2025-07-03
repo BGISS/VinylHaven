@@ -12,7 +12,7 @@ function Footer() {
 
         <div className="footer-section">
           <h4>Contact</h4>
-          <p>Email: <a href="mailto:support@nylhaven.com">support@nylhaven.com</a></p>
+          <p>Email: <a href="">support@nylhaven.com</a></p>
           <p>Hours: Mon-Fri, 9am-6pm</p>
         </div>
 
