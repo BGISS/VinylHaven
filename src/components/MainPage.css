@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: row;
     width: 100%;
-    background-color: #FFFCF4;
+    /* background-color: #FFFCF4; */
     overflow-x: hidden;
 }
 #all-vinyls {
@@ -23,7 +23,7 @@
   gap: 1rem;
   padding-top:1rem;
   overflow-x: hidden;
-  background-color: #FFFCF4;
+  /* background-color: #FFFCF4; */
 
 }
 
