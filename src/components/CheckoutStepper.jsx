@@ -24,13 +24,13 @@ import Toast from "./Toast";
         <>
         <div id="stepper-container">
             <div className="step-indicator">
-            <div className={step >= 1 ? "active-step" : ""}>1</div>
-            <div className={step >= 2 ? "active-step" : ""}>2</div>
-            <div className={step >= 3 ? "active-step" : ""}>3</div>
+            <div className={step >= 1 ? "active-step" : ""}>1 <span>Cart</span></div>
+            <div className={step >= 2 ? "active-step" : ""}>2 <span>Payment</span></div>
+            <div className={step >= 3 ? "active-step" : ""}>3 <span>Summary</span></div>
             </div>
         <div id="stepper-content">
             {step===1 && <ItemSummaryPage setStep={nextStep}/>}
-            {step===2 && <CardInformationForm setName={setName} setEmail={setEmail} setAdress={setAddress}prevStep={previouStep} nextStep={nextStep}/>}
+            {step===2 && <CardInformationForm setName={setName} setEmail={setEmail} setAddress={setAddress}prevStep={previouStep} nextStep={nextStep}/>}
             {step===3 && <SummaryPage name={name} email={email} address={address}/>}
         </div>
         </div>
