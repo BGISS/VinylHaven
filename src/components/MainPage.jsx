@@ -59,9 +59,6 @@ function MainPage() {
   const itemsPerPage = 4;
   const [currentPage, setCurrentPage] = useState(1);
 
-  const letterInRange = (char, [start, end]) =>
-  char.toUpperCase() >= start && char.toUpperCase() <= end;
-
   const nameInSelectedRanges = (name, selectedRanges) => {
         const firstChar = name.charAt(0).toUpperCase();
        return selectedRanges.some(rangeStr => {
@@ -121,6 +118,9 @@ function MainPage() {
 
   return (
     <>
+     <div id="sale-banner">
+    <p>Don't miss out on our annual sales, <strong>20% off best seller records!</strong></p>
+  </div>
       <div id="main-page">
         <div id="filters">
           <div id="filter-img">

@@ -115,3 +115,39 @@
   width: 16px;
   height: 16px;
 }
+#sale-banner {
+  background: #ff4c4c;
+  color: white;
+  font-weight: 200;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 1rem 0;
+  letter-spacing: 1.5px;
+  user-select: none;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  margin-bottom: 1rem;
+}
+#sale-banner p, #sale-banner span{
+  overflow: hidden;
+  white-space: nowrap; 
+  transform: translateX(-100%);
+  animation: slideIn 1s ease forwards, floatLeftRight 3s ease-in-out 1s infinite alternate;
+  margin: 0;
+}
+
+@keyframes slideIn {
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes floatLeftRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100px);
+  }
+}
