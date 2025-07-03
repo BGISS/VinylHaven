@@ -11,7 +11,21 @@
     font-size: 2vw;
     font-weight: 200;
     letter-spacing: 5px;
+    animation: fadeSlideUp 1.5s ease-out forwards;
+    opacity: 0;
 }
+
+@keyframes fadeSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .parallax {
   background-image: url('../assets/landing-disk.jpg');
   height:70vh;

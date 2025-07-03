@@ -8,13 +8,21 @@
   overflow-x: hidden;
 }
 #start-desc{
-   display: flex;
    justify-content: center;
     margin-top: 5vh; 
-    height: 20vh;
+    height: 60vh;
 }
-#start-desc p{
-    font-size: 1.5vw;
-    font-weight: 200;
-    letter-spacing: 3px;
+#start-desc h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  letter-spacing: 3px;
+  font-weight: 700;
+  text-align: center;
+}
+
+#start-desc p {
+  font-size: 1.125rem;
+  margin-bottom: 1.25rem;
+  text-align: center;
+  font-weight: 300;
 }
