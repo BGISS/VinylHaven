@@ -1,8 +1,10 @@
 import { Form,Button, Container} from "react-bootstrap";
 import { useState } from "react";
+import { useCart } from "./CartProvider"
 import "./CardInformationForm.css"
 
 function CardInformationForm({prevStep, nextStep,setName,setEmail,setAddress}){
+  const {removeAllItems}= useCart()
     const [formData, setFormData] = useState({
     fullName: "",
     address: "",
@@ -40,6 +42,7 @@ function CardInformationForm({prevStep, nextStep,setName,setEmail,setAddress}){
       setAddress(formData.address);
       setEmail(formData.email);
       setName(formData.fullName);
+      removeAllItems();
       nextStep();
     }
     

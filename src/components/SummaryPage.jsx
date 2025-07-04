@@ -5,14 +5,12 @@ import { useState } from "react";
 import ReviewForm from "./ReviewForm";
 
 function SummaryPage({name,email,address}){
-    const {cart,removeAllItems} = useCart();
+    const {cart} = useCart();
     const [showForm, setShowForm]= useState(false);
     const numItems= cart.length;
     
     function handleHomeButton(){
-        removeAllItems();
         setShowForm(true);
-        
     }
     return(
         <>

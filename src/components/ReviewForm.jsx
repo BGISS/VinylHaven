@@ -1,10 +1,10 @@
 
 import { useState } from "react";
-import { Form, Button, Container } from "react-bootstrap";
+import { Form, Button, Container, OverlayTrigger, Tooltip } from "react-bootstrap";
 import { useNavigate } from "react-router";
 
 function ReviewForm() {
-  const naviagte= useNavigate();
+  const navigate= useNavigate();
   const [review, setReview] = useState({
     name: "",
     rating: "",
@@ -21,14 +21,27 @@ function ReviewForm() {
     console.log("Review submitted:", review);
     alert("Thanks for your feedback!");
     setReview({ name: "", rating: "", comment: "" });
-    naviagte("/")
+    navigate("/")
+  };
+   const handleClose = () => {
+   setReview({ name: "", rating: "", comment: "" }); 
+    navigate("/");
   };
 
   return (
     <Container style={{ maxWidth: "500px", marginTop: "2rem" }}>
+     
       <h4>Please leave us a review</h4>
       <Form onSubmit={handleSubmit}>
-        
+        <OverlayTrigger
+        placement="top"
+        overlay={<Tooltip id="close-tooltip">Close this form</Tooltip>}
+      >
+         <Button  
+        onClick={handleClose} 
+        style={{width:"20px", borderRadius:"40%", position:"absolute",top:"30%", right:"34%"}}
+      >  &times;</Button>
+      </OverlayTrigger>
         <Form.Group controlId="reviewRating" className="mb-3">
           <Form.Label>Rate your website experience</Form.Label>
           <Form.Select

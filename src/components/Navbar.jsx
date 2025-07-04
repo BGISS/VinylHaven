@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router';
+import { Link, useLocation } from 'react-router';
 import { HashLink } from 'react-router-hash-link';
 import { useCart } from "./CartProvider"
 import Image from 'react-bootstrap/Image';
@@ -14,10 +14,17 @@ function NavigationBar(){
     const [showNavbar, setShowNavbar] = useState(false);
     const {cart}= useCart();
     const numItems= cart.length;
+    const location = useLocation();
+    const isHomePage = location.pathname === '/'
+
     useEffect(() => {
+       if (!isHomePage) {
+      setShowNavbar(true); 
+      return;
+    }
     const scrollContainer = document.getElementById('main-content');
 
-  const onScroll = () => {
+    const onScroll = () => {
     const scrollY = scrollContainer.scrollTop;
     setShowNavbar(scrollY > 0);
   };
@@ -31,7 +38,7 @@ function NavigationBar(){
       scrollContainer.removeEventListener('scroll', onScroll);
     }
   };
-}, []);
+}, [isHomePage]);
 
     return (
         <>

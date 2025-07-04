@@ -8,10 +8,10 @@
 
 .step-indicator {
   display: flex;
-  margin-top: 4rem;
+  margin-top: 8rem;
   justify-content: space-around;
   margin-bottom: 1.5rem;
- background-color: #FFFCF4;
+ /* background-color: #FFFCF4; */
 }
 
 .step-indicator div {
