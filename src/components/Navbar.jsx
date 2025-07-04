@@ -51,7 +51,7 @@ function NavigationBar(){
             )}
 
             <Navbar
-                expand="lg"
+                expand="sm"
                 bg="dark"
                 data-bs-theme="dark"
                 fixed="top"

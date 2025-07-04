@@ -8,13 +8,19 @@
 
 .step-indicator {
   display: flex;
+  justify-content: flex-start;
+   gap: 40vw;
+  align-items: center;
   margin-top: 8rem;
-  justify-content: space-around;
+  margin-left: 2rem;
   margin-bottom: 1.5rem;
- /* background-color: #FFFCF4; */
+  position: relative;
+  counter-reset: step;
+  padding: 0 1rem;
 }
 
 .step-indicator div {
+  position: relative;
   width: 40px;
   height: 40px;
   line-height: 40px;
@@ -22,8 +28,36 @@
   background: #ccc;
   text-align: center;
   font-weight: bold;
+  z-index: 1;
 }
-.step-indicator span{
+
+.step-indicator div:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  width: calc(50vw - 100px);
+  height: 4px;
+  background-color: #ccc;
+  transform: translateY(-50%);
+  z-index: 0;
+}
+
+.step-indicator .completed-step {
+  background: #E49052;
+  color: white;
+}
+.step-indicator .completed-step:not(:last-child)::after {
+  background-color: #E49052;
+}
+.step-indicator .active-step {
+  background: #E49052 !important;
+  color: white;
+}
+.step-indicator span {
+  display: block;
+  text-align: center;
+  font-size: 0.9rem;
   color: black;
 }
 .active-step {
