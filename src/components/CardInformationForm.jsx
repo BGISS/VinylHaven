@@ -2,7 +2,7 @@ import { Form,Button, Container} from "react-bootstrap";
 import { useState } from "react";
 import "./CardInformationForm.css"
 
-function CardInformationForm({prevStep, nextStep,setName,setEmail,setAdress}){
+function CardInformationForm({prevStep, nextStep,setName,setEmail,setAddress}){
     const [formData, setFormData] = useState({
     fullName: "",
     address: "",
@@ -37,7 +37,7 @@ function CardInformationForm({prevStep, nextStep,setName,setEmail,setAdress}){
       return;
     } else {
       setErrors({});
-      setAdress(formData.address);
+      setAddress(formData.address);
       setEmail(formData.email);
       setName(formData.fullName);
       nextStep();
