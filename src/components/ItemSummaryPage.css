@@ -7,8 +7,13 @@
     gap:2rem;
     max-height: 90vh;     
     overflow-y: scroll;     
-    overflow-x: hidden; 
-}
+    overflow-x: hidden;   
+    scrollbar-color: black #FFFCF4; 
+    scrollbar-width: thin;
+    }
+    
+
+
 #summary-cont{
     display: flex;
     flex-direction: row;

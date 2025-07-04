@@ -3,6 +3,8 @@
   height: 100vh;
   overflow-x: hidden !important;
   overflow-y: scroll;
-  font-family: "Inconsolata"; 
+  font-family: "Inconsolata";
+  scrollbar-color: black white;
+  scrollbar-width: thin; 
 }
 
