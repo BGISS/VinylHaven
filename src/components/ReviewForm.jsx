@@ -26,44 +26,33 @@ function ReviewForm() {
 
   return (
     <Container style={{ maxWidth: "500px", marginTop: "2rem" }}>
-      <h4>Leave a Review</h4>
+      <h4>Please leave us a review</h4>
       <Form onSubmit={handleSubmit}>
-        <Form.Group controlId="reviewName" className="mb-3">
-          <Form.Label>Name</Form.Label>
-          <Form.Control
-            type="text"
-            name="name"
-            placeholder="Your name"
-            value={review.name}
-            onChange={handleChange}
-            required
-          />
-        </Form.Group>
-
+        
         <Form.Group controlId="reviewRating" className="mb-3">
-          <Form.Label>Rating</Form.Label>
+          <Form.Label>Rate your website experience</Form.Label>
           <Form.Select
             name="rating"
             value={review.rating}
             onChange={handleChange}
             required
           >
-            <option value="">Choose...</option>
-            <option>1 - Poor</option>
-            <option>2 - Fair</option>
-            <option>3 - Good</option>
-            <option>4 - Very Good</option>
-            <option>5 - Excellent</option>
+            <option value="">Here are your choices</option>
+            <option>1 - The experience was not satisfactory</option>
+            <option>2 - The website needs a lot of work</option>
+            <option>3 - The website is satisfactory but needs more work </option>
+            <option>4 - The website is great but it is still missing a little something</option>
+            <option>5 - I loved everything about the website</option>
           </Form.Select>
         </Form.Group>
 
         <Form.Group controlId="reviewComment" className="mb-3">
-          <Form.Label>Comment</Form.Label>
+          <Form.Label>Your comments also matter to us</Form.Label>
           <Form.Control
             as="textarea"
             rows={3}
             name="comment"
-            placeholder="Write your review..."
+            placeholder="We take into consideration every review, don't hesitate to tell us what you really think!"
             value={review.comment}
             onChange={handleChange}
             required
